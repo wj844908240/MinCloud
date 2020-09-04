@@ -1,0 +1,50 @@
+@bgcolor: #f9fafb;
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+#header{
+  background: #404040;
+  border-bottom-color: #404040;
+  width: 100%;
+  height: 40px;
+  .main{
+    width: 65vw;
+    min-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .h_right{
+    background: #404040;
+    border-bottom-color: #404040;
+    color: #fff;
+    float: right;
+    line-height: 40px;
+    font-size: 12px;
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+        color: #fff;
+        a{
+          color: #fff;
+          padding: 0 12px;
+          &:hover{
+            color:#38A5D1;
+          }
+        }
+        .on{
+          color:#38A5D1;
+        }
+      }
+    }
+  }
+  .h_left{
+    float: left;
+    color: #fff;
+    line-height: 40px;
+    a{
+      color:#38A5D1;
+    }
+  }
+}

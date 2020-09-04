@@ -1,0 +1,344 @@
+.login-body {
+  width: 100%;
+  background: #F5F5F5;
+
+  .login-bg {
+    background-color: #fff;
+    box-shadow: darkgrey 0 15px 30px 0; //边框阴影
+    background-image: url("../../img/login.png");
+    background-repeat: no-repeat;
+    background-position: -195px bottom;
+    background-size: 58%;
+  }
+
+  .login-item {
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 113px;
+
+    .back-home {
+      text-align: right;
+      color: #3ab8e8;
+      margin: 80px 6px 60px 0;
+    }
+
+    .login-left {
+      float: left;
+      text-align: center;
+      margin-top: 106px;
+
+      img {
+        width: 184px;
+        margin-bottom: 28px;
+      }
+
+      p {
+        color: #3ab8e8;
+      }
+    }
+
+    .loginForm {
+      width: 352px;
+      overflow: hidden;
+      background: #EEE;
+      padding: 30px 20px;
+      float: right;
+
+      .err {
+        margin-left: 4px;
+        color: #FD0C0C;
+      }
+
+      .waring {
+        margin: 0 0 0 4px;
+        color: #2BB1E9;
+      }
+
+      .login_title {
+        h1 {
+          text-align: center;
+          color: #3ab8e8;
+          font-size: 18px;
+        }
+      }
+
+      .login_min_box {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 25px;
+        position: relative;
+        border: 1px solid #DADADA;
+        border-radius: 4px;
+
+        label {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          z-index: 20;
+        }
+
+        input {
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          border: none;
+          outline: none;
+          padding-left: 46px;
+          font-size: 14px;
+          color: #9c9fb0;
+          border-radius: 4px;
+          background: #fff;
+        }
+
+        input[type="text"]:focus {
+          line-height: normal;
+          line-height: 60px \9;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-transition-delay: 9999s;
+          -webkit-transition: color 9999s ease-out, background 9999s ease-out;
+        }
+      }
+
+      .user_box {
+        label {
+          background: url(../../img/user.png) no-repeat;
+        }
+      }
+
+      .psw_box {
+        label {
+          background: url(../../img/pwd.png) no-repeat;
+        }
+      }
+
+      input::-webkit-input-placeholder {
+        color: #9c9fb0;
+        opacity: 1;
+      }
+
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #9c9fb0;
+        opacity: 1;
+      }
+
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #9c9fb0;
+        opacity: 1;
+      }
+
+      input:-ms-input-placeholder {
+        color: #9c9fb0;
+        opacity: 1;
+      }
+
+      .login_btn {
+        width: 100%;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 4px;
+        background: #3ab8e8;
+        //background: #1280e8 linear-gradient(90deg, #249af9, #0873e0);
+        margin: 20px 0 10px;
+        cursor: pointer;
+      }
+
+      .forgot {
+        margin-top: 14px;
+        overflow: hidden;
+
+        .login-reme {
+          float: left;
+          color: #A7A7A7;
+          padding-left: 4px;
+
+          input {
+            vertical-align: middle;
+            margin-right: 6px;
+            cursor: pointer;
+          }
+
+          label {
+            cursor: pointer;
+          }
+        }
+
+        .login-form-forgot {
+          float: right;
+          color: #3ab8e8;
+        }
+      }
+    }
+  }
+}
+
+.forgetForm {
+  width: 470px;
+  margin: 0 auto;
+  min-height: 600px;
+
+  .steps-login {
+    margin-top: 20px;
+    text-align: center;
+
+    img {
+      width: 188px;
+    }
+
+    margin-bottom: 34px;
+  }
+
+  .forget-item {
+    width: 100%;
+    background: #fff;
+    padding: 36px 40px;
+    box-shadow: darkgrey 0 10px 30px 0;
+    border-radius: 4px;
+  }
+
+  .login_title {
+    h1 {
+      text-align: center;
+      color: #3BB7E8;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      color: #000;
+    }
+  }
+
+  .forget {
+    .sp-line {
+      text-align: center;
+      height: 20px;
+      margin-bottom: 20px;
+      .line {
+        display: inline-block;
+        border-top: 1px solid #d1d2d4;
+        width: 100%;
+      }
+
+      .title {
+        color: #999;
+        font-size: 14px;
+        position: relative;
+        top: -14px;
+        background-color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    label {
+      width: 72px;
+      float: left;
+      text-align: left;
+      margin-right: 10px;
+      color: #373737;
+    }
+
+    span {
+      color: #ff0000;
+    }
+
+    ul {
+      li {
+        margin-bottom: 20px;
+        overflow: hidden;
+        line-height: 45px;
+
+        .pwd {
+          font-size: 14px;
+          height: 45px;
+          width: 300px;
+          display: inline-block;
+          border: 1px solid #ddd;
+          border-radius: 2px;
+          color: #333;
+          vertical-align: middle;
+          padding: 13px 10px 12px;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          line-height: 1;
+
+        }
+
+        .code {
+          float: left;
+          font-size: 14px;
+          height: 45px;
+          width: 200px;
+          display: inline-block;
+          border: 1px solid #ddd;
+          border-radius: 2px;
+          color: #333;
+          vertical-align: middle;
+          padding: 13px 10px 12px;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          line-height: 1;
+        }
+
+        .vcode-btn {
+          float: right;
+          width: 84px;
+          height: 45px;
+          line-height: 45px;
+          border: none;
+          color: #3BB7E8;
+        }
+      }
+    }
+  }
+
+  .error {
+    color: #ff0000;
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-align: left;
+    clear: both;
+    line-height: 25px;
+    margin-left: 84px;
+  }
+  .sub{
+    position: relative;
+    .qc-btn {
+      width: 178px;
+      height: 45px;
+      border-radius: 8px;
+      margin: 40px auto 0;
+      line-height: 45px;
+      text-align: center;
+      background-color: #3AB8E8;
+      border: none;
+      color: #fff;
+      outline: 0;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: normal;
+    }
+    .home-back{
+      position: absolute;
+      right: 6px;
+      top:24px;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    margin-top: 40px;
+  }
+  .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    // transform: scale(0.8);
+    .content{
+         height:360px;
+         width: 300px;
+         border: 1px solid #ddd;
+         transition: 1000ms;
+         .textdescript{
+            width: 300px;
+            text-align: center;
+            height: 60px;        
+            line-height: 60px;
+            font-size: 17px;
+            font-weight: 500;
+    }
+  }
+}
+.swiper-slide-active,.swiper-slide-duplicate-active{
+    // transform: scale(1);
+    .content:hover{
+        box-shadow:-16px 2px 35px -2px rgba(0, 0, 0, 0.3);
+    }
+  }

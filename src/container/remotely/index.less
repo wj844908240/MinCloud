@@ -1,0 +1,142 @@
+.banner#acqBanner{
+    background: url(../../img/acqBanner.jpg);
+    .acquisiteInfo{
+        position: relative;
+        .innerText{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 300px;
+            margin: auto;
+            .title{
+                h2{
+                    color: #fff;
+                    text-align: left;
+                    font-size: 28px;
+                }
+            }
+            .chinese,.english{
+                padding: 20px 0;
+                color: #fff;
+                text-align: left;
+             
+            }
+            .english{
+                padding: 20px 0;
+                color: #fff;
+                text-align: left;  
+            }
+            .chinese{
+                letter-spacing: 4px;
+                padding: 5px 0;
+            }
+
+        }
+    }
+}
+.banner#diagBanner{
+    background: url(../../img/diagBanner.jpg);
+    .diagInfo{
+        .innerText{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 300px;
+            margin: auto;
+            .title{
+                h2{
+                    color: #fff;
+                    text-shadow: 6px 2px 3px #000;
+                    text-align: left;
+                    font-size: 28px;
+                }
+            }
+            .text{
+                padding: 20px 0;
+                p{
+                    color: #fff;
+                    text-align: left;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+    }
+
+}
+.banner#acqBanner,.banner#diagBanner{
+    background-repeat: no-repeat !important;
+    background-size: cover  !important;
+    background-position: center !important;
+}
+.server{
+    .center{
+        .circle#acquisite{
+            border-radius: 50%;
+            width: 30vw;
+            height: 30vw;
+            background: url(../../img/remoteCenter.png);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .discriptinfo{
+            width: 526px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+        }
+    }
+    .center#diagnosis{
+        .circle{
+            background: url(../../img/remoteCenter.png);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .topLefBox,.topRigBox,.centerLefBox,.centerRigBox,.bomLefBox,.bomRigBox{
+            min-height:125px;
+            width: 19.5vw;
+            min-width: 310px;
+            background-color: #fff;
+            box-shadow:-16px 2px 35px -2px rgba(0, 0, 0, 0.3);
+            .tip{
+                padding:40px 20px 0 20px; 
+                font-size: 15px;
+                font-weight: bolder;
+                letter-spacing: 2px;
+            }
+            .arrow{
+                height:54px;
+                text-align: right;
+                position: relative;
+                overflow: hidden;
+                span{
+                    display: inline-block;
+                    width: 78px;
+                    height: 78px;
+                    background-color: #4969f8;
+                    border-radius: 50%;
+                    margin: 5px -15px 0 0;
+                    position: relative;
+                    .rightarrow{
+                       display: inline-block;
+                       width: 32px;
+                       height: 18px;
+                       background-size: contain;
+                       background: url("../../img/arrow.png");
+                       background-repeat: no-repeat;
+                       margin: 20px 20px 0px 0px;
+                    }
+                }
+            }
+        }
+        .centerLefBox,.centerRigBox{
+            .tip{
+                display: inline-block;
+                height: 40px;
+                line-height: 40px;
+            }
+            position: absolute;
+            z-index: 999;
+        }
+    }
+}

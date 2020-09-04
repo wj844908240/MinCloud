@@ -1,0 +1,108 @@
+.box{
+    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+}
+.flexbox{
+    -webkit-flex: 1;        /* Chrome */  
+    -ms-flex: 1 ;            /* IE 10 */  
+    flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 1;  /* OLD - iOS 6-, Safari 3.1-6 */  
+    -moz-box-flex: 1;       /* OLD - Firefox 19- */  
+    padding:0 18px;
+}
+.banner#intellBanner{
+    background: url(../../img/intellBanner.jpg);
+    background-repeat: no-repeat !important;
+    background-size: cover  !important;
+    background-position: center !important;
+    .info{
+        .title{
+            h2.linear{
+                // background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#afffed), to(#61b4ff)); 
+                filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#61b4ff',endColorStr='#61b4ff',gradientType='1'); 
+                background: -moz-linear-gradient(left, #61b4ff, #afffed); 
+                background: -o-linear-gradient(left,#61b4ff, #afffed); 
+                background: -webkit-gradient(linear, left top,left bottom, from(#61b4ff) , to(#afffed));
+                color: transparent !important; 
+                -webkit-text-fill-color: transparent !important;
+                -webkit-background-clip: text !important;
+			}
+        }
+        .text{
+            height: 10%;
+            margin-top: 50px;
+            span{
+              padding: 4px 10px;
+              border: 1px solid #90d6cc;
+              border-radius: 10px;
+            }
+        }
+    }
+}
+.server{
+    position: relative;
+    .topEle,.botEle,.middleEle{
+        .ant-col{
+            .content,.imgContent{
+                position: relative;
+                .headline.Intelligent{
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 45px;
+                        margin: 0px;
+                        border-bottom: 6px solid #3aaedf;
+                    }
+                }
+            }
+            .content#intelligent{
+                width: 100% !important;
+                height: 400px;
+                .headline.Intelligent{
+                    text-align: center;
+                    &::after {
+                        margin: 0 auto;
+                    }
+                }
+               .maincontent{
+                  text-indent: 2rem;
+                   width: 650px;
+                   margin: 0 auto;
+                }
+            }
+        }
+    }
+    .botEle{
+        .lastContent{
+            margin-top: 75px;
+            width: 100%;
+        }
+        margin-bottom: 45px;
+    }
+    .imgList{
+        margin-top: 35px;
+        .ant-card-body{
+            padding: 20px 0px;
+        }
+        .ant-card{
+            box-shadow: 6px 4px 22px rgba(0, 0, 0, 0.3);
+            img{
+                width: 100%;
+                height:13vw;
+                min-width: 158px;
+                min-height: 177px;
+                object-fit: cover;
+            }
+            .ant-card-meta-title{
+                text-align: center;
+                font-weight: 600;
+            }
+            .ant-card-meta-description{
+                text-align: center; 
+            }
+        }
+    }
+}

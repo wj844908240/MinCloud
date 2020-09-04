@@ -1,0 +1,158 @@
+ul,li{
+  margin: 0;
+  padding: 0;
+}
+#navbar {
+  width: 65vw;
+  min-width: 1000px;
+  margin: 0 auto 20px auto;
+  zoom: 1;
+  height: 65px;
+  overflow: hidden;
+  .ant-menu-submenu-title{
+    border-bottom: 3px solid transparent;
+  }
+  .thkyy {
+    float: right;
+    margin-top: 14px;
+    .userMsg{
+      font-size: 16px;
+      margin-top: 14px;
+      line-height: 46px;
+      .login{
+        cursor: pointer;
+        color: #1890ff;
+        padding-right: 10px;
+      }
+    }
+
+  }
+
+  .h_left {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+
+    img {
+      width: 150px;
+      height: 46px;
+      margin-top: 18px;
+      object-fit: contain;
+    }
+  }
+
+  .ant-menu-horizontal {
+    float: left;
+    background: #fff;
+    border-bottom-color: #fff;
+    font-size: 16px;
+    margin-top: 14px;
+  }
+}
+
+.ant-menu-submenu-horizontal {
+  color: #000;
+}
+.ant-menu-horizontal .ant-menu-item, .ant-menu-horizontal .ant-menu-submenu{
+  margin: 0 20px;
+  letter-spacing: 1px;
+}
+.ant-menu-item a:hover{
+  color: #1890ff!important;
+}
+.ant-menu-item > a{
+  margin:0 10px;
+}
+.ant-menu-item, .ant-menu-submenu-title{
+  padding: 0!important;
+}
+.ant-menu-submenu {
+  a {
+    color: #000;
+  }
+
+  .ant-menu-submenu-selected {
+    a {
+      color: #1890ff !important;
+    }
+  }
+
+  .ant-menu-dark {
+    .ant-menu-item-selected > a {
+      color: #1890ff;
+    }
+
+    .ant-menu-item-active > a:hover {
+      color: #1890ff;
+    }
+  }
+
+  &::after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+.ant-menu-vertical .ant-menu-item.itemMenu:not(:last-child){
+  margin: 0;
+}
+.ant-menu-vertical > .ant-menu-item.itemMenu{
+  height: 40px !important;
+  line-height: 40px !important;
+  margin: 0;
+  &:hover{
+    background-color: #1a74db;
+    a{
+      color: #fff !important;
+    }
+  }
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  // background-color: #1a74db  !important;
+  a{
+    color: #000 !important;
+  }
+}
+// 用户名处样式
+.ant-dropdown  {
+  .ant-dropdown-menu {
+    padding: 0 !important;
+  }
+  .ant-dropdown-menu-item.itemMenu{
+    line-height: 30px !important;
+    // padding: 0;
+    // margin: 0;
+    &:hover{
+      background-color: #1a74db;
+      span{
+        color: #fff !important;
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
+
+/* 指正常的未被访问过的链接*/
+a:link {
+  text-decoration: none !important;
+}
+
+/*指已经访问过的链接*/
+a:visited {
+  text-decoration: none !important;
+}
+
+/*指鼠标在链接*/
+a:hover {
+  text-decoration: none !important;
+}
+
+/* 指正在点的链接*/
+a:active {
+  text-decoration: none !important;
+}

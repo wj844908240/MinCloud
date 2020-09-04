@@ -1,0 +1,63 @@
+@import '~antd/dist/antd.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000!important;
+    width: 100%;
+    overflow-x: auto;
+    min-width: 1280px;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+i,em{
+    font-style: normal;
+    display: block;
+}
+.hide {
+    display: none!important;
+}
+
+.show {
+    display: block!important;
+}
+.clearfix::after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}
+  .clearfix {
+   zoom: 1;
+}
+#navbar .ant-menu-horizontal > .ant-menu-item > a{
+    color: #000;
+    border-bottom: 3px solid transparent;
+}
+#navbar .ant-menu-horizontal > .ant-menu-item-selected > a {
+    color: #1890ff;
+    border-bottom: 3px solid #1890ff;
+}
+#navbar .ant-menu-horizontal .ant-menu-submenu-selected  .ant-menu-submenu-title{
+    color: #1890ff;
+    border-bottom: 3px solid #1890ff;
+}
+#navbar .ant-breadcrumb-link{
+    color: #000;
+}
+#navbar .ant-checkbox-wrapper{
+    color: #000;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+#navbar  .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected{
+    border-bottom: 3px solid transparent!important;
+}
