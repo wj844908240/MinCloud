@@ -53,10 +53,6 @@ class Onsoft extends Component {
 		// 	}
 		// })
 	}
-	GoPrint() {
-		console.log(document.cookie.split(';'))
-		console.log('host',window.location.pathname)
-	}
 	render() {
 		const { size } = this.state;
 		return (
