@@ -16,23 +16,46 @@ class Onsoft extends Component {
 	componentWillMount() {
 		document.documentElement.scrollTop = document.body.scrollTop = 0;
 	}
-	// GoPrint() {
-	// 	TOOLS.get("user/is_logined/").then(res => {
-	// 		if (res.status === 200) {
-	// 			if (res.data.is_logined === true) {
-	// 				window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
-	// 			} else {
-	// 				// this.props.history.push("/login")
-	// 				// 页面刷新
-	// 				// window.location.reload()
-	// 				window.location.href = "http://web.miningcloud.com.cn:8031"
-	// 			}
-	// 		}
-	// 	})
-	// }
+	GoPrint() {
+		if (document.cookie && document.cookie != '') {
+			var cookies = document.cookie.split(';');
+			var name1 = 'user_token'
+			var name2 = 'child_sys_userInfo'
+			var info = {
+				user_token: '',
+				child_sys_userInfo: ''
+			}
+			for (let i = 0; i < cookies.length; i += 1) {
+				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
+				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
+					cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
+					info.user_token = cookieValue
+					break;                    
+				}
+				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
+					cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
+					info.child_sys_userInfo = cookieValue
+					break;                    
+				}   
+			}
+			console.log('info', info)
+		}
+		// TOOLS.get("user/is_logined/").then(res => {
+		// 	if (res.status === 200) {
+		// 		if (res.data.is_logined === true) {
+		// 			window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+		// 		} else {
+		// 			// this.props.history.push("/login")
+		// 			// 页面刷新
+		// 			// window.location.reload()
+		// 			window.location.href = "http://web.miningcloud.com.cn:8031"
+		// 		}
+		// 	}
+		// })
+	}
 	GoPrint() {
 		console.log(document.cookie.split(';'))
-		console.log('host',location.host)
+		console.log('host',window.location.pathname)
 	}
 	render() {
 		const { size } = this.state;
