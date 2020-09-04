@@ -28,12 +28,12 @@ class Onsoft extends Component {
 			for (let i = 0; i < cookies.length; i += 1) {
 				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
 				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
-					cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
+					var cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
 					info.user_token = cookieValue
 					break;                    
 				}
 				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
-					cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
+					var cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
 					info.child_sys_userInfo = cookieValue
 					break;                    
 				}   
