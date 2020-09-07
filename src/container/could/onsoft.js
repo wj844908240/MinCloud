@@ -40,6 +40,8 @@ class Onsoft extends Component {
 			TOOLS.post("user/is_logined/", info).then(res => {
 				if (res.status === 200) {
 					console.log('resp', res)
+					var user_from = document.cookie = "user_from={from:http://www.miningcloud.com.cn/gcfznew/dashboardold/}"
+					console.log(user_from)
 					// if (res.data.is_logined === true) {
 					// 	window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 					// } else {
