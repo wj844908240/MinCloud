@@ -29,13 +29,11 @@ class Onsoft extends Component {
 				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
 				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
 					var cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
-					info.user_token = cookieValue
-					break;                    
+					info.user_token = cookieValue                   
 				}
 				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
 					var cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
-					info.child_sys_userInfo = cookieValue
-					break;                    
+					info.child_sys_userInfo = cookieValue                    
 				}   
 			}
 			console.log('info', info)
