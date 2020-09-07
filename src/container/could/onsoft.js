@@ -36,6 +36,7 @@ class Onsoft extends Component {
 					info.child_sys_userInfo = cookieValue                    
 				}   
 			}
+			console.log(info)
 			// TOOLS.post("user/is_logined/", info).then(res => {
 			// 	if (res.status === 200) {
 			// 		if (res.data.is_logined === true) {
