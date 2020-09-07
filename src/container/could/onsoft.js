@@ -36,20 +36,20 @@ class Onsoft extends Component {
 					info.child_sys_userInfo = cookieValue                    
 				}   
 			}
-			console.log('info', info)
+			console.log('info',info)
+			TOOLS.post("user/is_logined/", info).then(res => {
+				if (res.status === 200) {
+					if (res.data.is_logined === true) {
+						window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+					} else {
+						// this.props.history.push("/login")
+						// 页面刷新
+						// window.location.reload()
+						window.location.href = "http://web.miningcloud.com.cn:8031"
+					}
+				}
+			})
 		}
-		// TOOLS.get("user/is_logined/").then(res => {
-		// 	if (res.status === 200) {
-		// 		if (res.data.is_logined === true) {
-		// 			window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
-		// 		} else {
-		// 			// this.props.history.push("/login")
-		// 			// 页面刷新
-		// 			// window.location.reload()
-		// 			window.location.href = "http://web.miningcloud.com.cn:8031"
-		// 		}
-		// 	}
-		// })
 	}
 	render() {
 		const { size } = this.state;
