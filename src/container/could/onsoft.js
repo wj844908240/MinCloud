@@ -41,15 +41,14 @@ class Onsoft extends Component {
 				if (res.status === 200) {
 					console.log('resp', res)
 					var user_from = document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-					console.log(user_from)
-					// if (res.data.is_logined === true) {
-					// 	window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
-					// } else {
-					// 	// this.props.history.push("/login")
-					// 	// 页面刷新
-					// 	// window.location.reload()
-					// 	window.location.href = "http://web.miningcloud.com.cn:8031"
-					// }
+					if (res.data.is_logined === true) {
+						window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+					} else {
+						// this.props.history.push("/login")
+						// 页面刷新
+						// window.location.reload()
+						window.location.href = "http://web.miningcloud.com.cn:8031"
+					}
 				}
 			})
 		}
