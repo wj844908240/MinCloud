@@ -36,10 +36,10 @@ class Onsoft extends Component {
 					info.child_sys_userInfo = cookieValue                    
 				}   
 			}
+			console.log('info',info)
 			if (info.user_token !== null && info.child_sys_userInfo !== null) {
 				TOOLS.post("user/is_logined/", info).then(res => {
 					if (res.status === 200) {
-						console.log('resp', res)
 						if (res.data.is_logined === true) {
 							window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 						} else {
