@@ -38,24 +38,25 @@ class Onsoft extends Component {
 			}
 			console.log('info',info)
 			console.log('cookie', document.cookie)
-			// if (info.user_token != "" && info.child_sys_userInfo != "") {
-			// 	TOOLS.post("user/is_logined/", info).then(res => {
-			// 		if (res.status === 200) {
-			// 			if (res.data.is_logined === true) {
-			// 				window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
-			// 			} else {
-			// 				// this.props.history.push("/login")
-			// 				// 页面刷新
-			// 				// window.location.reload()
-			// 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-			// 				window.location.href = "http://web.miningcloud.com.cn:8031"
-			// 			}
-			// 		}
-			// 	})
-			// } else {
-			// 	document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-			// 	window.location.href = "http://web.miningcloud.com.cn:8031"
-			// }
+			if (info.user_token != "" && info.child_sys_userInfo != "") {
+				TOOLS.post("user/is_logined/", info).then(res => {
+					if (res.status === 200) {
+						if (res.data.is_logined === true) {
+							console.log(res.data)
+							// window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+						} else {
+							// this.props.history.push("/login")
+							// 页面刷新
+							// window.location.reload()
+							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+							window.location.href = "http://web.miningcloud.com.cn:8031"
+						}
+					}
+				})
+			} else {
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+				window.location.href = "http://web.miningcloud.com.cn:8031"
+			}
 		} else {
 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
 				window.location.href = "http://web.miningcloud.com.cn:8031"			
