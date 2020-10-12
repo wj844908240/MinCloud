@@ -68,7 +68,7 @@ export default class Header extends Component {
         expires.setDate(Date.now() + 60 * 60 * 24 * 7)
         var list = { from: window.location.href }
         cookie.save('user_from', list);
-        window.location = 'http://218.249.43.70:8031/';
+        window.location = 'http://web.miningcloud.com.cn:8031/';
         // this.setState({
         //     current: "",
         // });
@@ -80,7 +80,7 @@ export default class Header extends Component {
         expires.setDate(Date.now() + 60 * 60 * 24 * 7)
         var list = { from: window.location.href }
         cookie.save('user_from', list);
-        window.location = 'http://218.249.43.70:8031/register'
+        window.location = 'http://web.miningcloud.com.cn:8031/register'
         // this.setState({
         //     current: "",
         // });
@@ -88,7 +88,7 @@ export default class Header extends Component {
         // this.props.history.push("/register")
     }
     goUserCenter() {
-        window.location = 'http://218.249.43.70:8031/'
+        window.location = 'http://web.miningcloud.com.cn:8031/'
         // this.props.history.push("/user")
     }
     outLogin() {
@@ -129,7 +129,7 @@ export default class Header extends Component {
         }
     }
     toPage() {
-        window.location = 'http://www.miningcloud.com.cn/console/';
+        window.location = 'http://web.miningcloud.com.cn:8031';
     }
     render() {
         const menu = (
@@ -182,9 +182,9 @@ export default class Header extends Component {
                         {/* <Menu.Item className="itemMenu" key="model:1"><Link to={"/container/model"}>模型库</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="model:2"><Link to={"/container/Know"}>知识库</Link></Menu.Item> */}
                         {/* <Menu.Item className="itemMenu" key="model:3"><Link to={"/container/model"}>科技信息</Link></Menu.Item> */}
-                        <Menu.Item className="itemMenu" key="model:3"><a href='http://tech.miningcloud.com.cn/' target='_blank'>科技信息</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="model:4"><a href='http://218.249.43.70:8033/' target='_blank'>矿业经济数据</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="model:5"><a href='http://equipment.miningcloud.com.cn' target='_blank'>矿业装备数据</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="model:3"><a href='http://techinfo.miningcloud.com.cn/' target='_blank'>科技信息</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="model:4"><a href='http://economic.miningcloud.com.cn/' target='_blank'>矿业经济数据</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="model:5"><a href='http://equip.miningcloud.com.cn' target='_blank'>矿业装备数据</a></Menu.Item>
                         <Menu.Item className="itemMenu" key="model:6"><a href='http://design.miningcloud.com.cn' target='_blank'>矿山设计数据</a></Menu.Item>
                     </SubMenu>
                     {/*<SubMenu title={<span className="submenu-title-wrapper">供需对接</span>}>
