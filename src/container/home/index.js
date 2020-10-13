@@ -72,6 +72,9 @@ class Home extends Component {
         sessionStorage.setItem("current", url.key);
         this.props.history.push(url.path);
     }
+    alertEvent() {
+        alert("升级维护中")
+    }
     render() {
         const { match } = this.props;
         const { Newzn, Newgj } = this.state
@@ -236,7 +239,7 @@ class Home extends Component {
                                     </a>
                                 </div>
                                 <div className="imgwrap">
-                                    <a href="http://design.miningcloud.com.cn" target='_blank'>
+                                    <a href="javascript:void(0)" target='_blank' onClick={e => this.alertEvent()}>
                                         <span className="img"></span>
                                         <span className="text">矿山设计数据</span>
                                     </a>

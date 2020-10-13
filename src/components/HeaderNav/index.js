@@ -131,6 +131,9 @@ export default class Header extends Component {
     toPage() {
         window.location = 'http://web.miningcloud.com.cn:8031';
     }
+    alertEvent() {
+        alert("升级维护中")
+    }
     render() {
         const menu = (
             <Menu>
@@ -185,7 +188,7 @@ export default class Header extends Component {
                         <Menu.Item className="itemMenu" key="model:3"><a href='http://techinfo.miningcloud.com.cn/' target='_blank'>科技信息</a></Menu.Item>
                         <Menu.Item className="itemMenu" key="model:4"><a href='http://economic.miningcloud.com.cn/' target='_blank'>矿业经济数据</a></Menu.Item>
                         <Menu.Item className="itemMenu" key="model:5"><a href='http://equip.miningcloud.com.cn' target='_blank'>矿业装备数据</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="model:6"><a href='http://design.miningcloud.com.cn' target='_blank'>矿山设计数据</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="model:6"><a href='javascript:void(0)' target='_blank' onClick={e => this.alertEvent()}>矿山设计数据</a></Menu.Item>
                     </SubMenu>
                     {/*<SubMenu title={<span className="submenu-title-wrapper">供需对接</span>}>
                         <Menu.Item key="commodity:1"><Link to={"/container/commodity"}>工业产品</Link></Menu.Item>
