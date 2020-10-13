@@ -216,21 +216,21 @@ class Home extends Component {
                             <div className='zj-left'>
 
                                 <div className="imgwrap">
-                                    <a href="http://tech.miningcloud.com.cn/" target='_blank'>
+                                    <a href="http://techinfo.miningcloud.com.cn/" target='_blank'>
                                         <span className="img"></span>
                                         <span className="text">科技信息</span>
                                     </a>
                                 </div>
 
                                 <div className="imgwrap">
-                                    <a href="http://218.249.43.70:8033/" target='_blank'>
+                                    <a href="http://economic.miningcloud.com.cn/" target='_blank'>
                                         <span className="img"></span>
                                         <span className="text">矿业经济数据</span>
                                     </a>
 
                                 </div>
                                 <div className="imgwrap">
-                                    <a href="http://equipment.miningcloud.com.cn" target='_blank'>
+                                    <a href="http://equip.miningcloud.com.cn" target='_blank'>
                                         <span className="img"></span>
                                         <span className="text">矿业设备数据</span>
                                     </a>
