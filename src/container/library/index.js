@@ -39,15 +39,13 @@ class Zsk extends Component {
                         <span className="zskword">共享数据集成，挖掘数据价值</span>
                     </div>
                 </div>
-                <div className="cloud_paltform">
+                {/* <div className="cloud_paltform">
                     <div className="w">
                         <h2>矿业经济数据</h2>
-                        {/* <p className='f-title'> <span>面向工业企业提供SaaS服务平台,助力企业降低成本,节约资源</span></p> */}
                         <p className='f-title'> <span>全面的行业数据平台，专业的数据分析和行业研究</span></p>
                         <p>
                             <a className='gdMore' target="_blank" href="http://218.249.43.70:8033/">更多+</a>
                         </p>
-                        {/*<p className="whole"  onClick={e=>{this.handClick("rjy")}}>查看全部</p>*/}
                         <div className="sourceOption clearfix">
                             <ul>
                                 <li>
@@ -83,8 +81,8 @@ class Zsk extends Component {
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div className='cloud_paltform' style={{padding:'0 0 30px 0'}}>
+                </div> */}
+                <div className='cloud_paltform'>
                     <div className='w'>
                         <h2>矿业装备数据</h2>
                         <div className='gks'>
@@ -128,13 +126,13 @@ class Zsk extends Component {
                         <div className='zsks' style={{margin:'80px 0 0 0'}}>
                             <div className="ssBox sLeft">
                                 <div>
-                                    <h2>模型库</h2>
+                                    <h2>MIM构建库</h2>
                                     <p>共享标准的MIM模型，构建MIM族库</p>
                                     <b></b>
                                 </div>
                                 <div>
-                                    <h2>科技信息</h2>
-                                    <p>快速获取所需的专家信息
+                                    <h2>信息资讯</h2>
+                                    <p>快速获取所需的行业资讯
                                     </p>
                                     <b></b>
                                 </div>

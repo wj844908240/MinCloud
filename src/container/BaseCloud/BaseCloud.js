@@ -16,7 +16,7 @@ class BaseCloud extends Component  {
 		TOOLS.get("user/is_logined/").then(res => {
 			if (res.status === 200) {
 				if (res.data.is_logined === true) {
-					window.location.href = "http://www.miningcloud.com.cn/bsss/overviews/"
+					window.location.href = "https://cloud.nscc-tj.cn"
 				} else {
 					this.props.history.push("/login")
 					// 页面刷新
@@ -34,7 +34,7 @@ class BaseCloud extends Component  {
 						<div className="content">
 							打造安全云计算平台，提供弹性可靠IaaS云服务
 						</div>
-						<a href="javascript:void(0)" onClick={e=>this.GoPrint()}>进入控制台</a>
+						<a href="javascript:void(0)" onClick={e=>this.GoPrint()}>申请试用</a>
 					</div>
 				</div>
 				<div className="basecloud">
@@ -115,6 +115,7 @@ class BaseCloud extends Component  {
 							</dl>
 						</li>
 					</ul>
+					<p style={{textAlign:'center'}}>由国家超级计算天津中心 天河云计算平台提供服务</p>
 				</div>	
 			</div>
 		)

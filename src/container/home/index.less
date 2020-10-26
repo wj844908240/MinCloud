@@ -2,8 +2,79 @@
 	min-height: 600px;
 	background: #F5F5F5;
 	.cloud{
-		background: url("../../img/gcfz_new.jpg") no-repeat;
-		background-size: 100% 100%;
+		// background: url("../../img/gcfz_new.jpg") no-repeat;
+		// background-size: 100% 100%;
+		height: 100%;
+		.ant-carousel{
+			height: 100%;
+			.slick-slider.homebanner{
+				height:100%;
+				.slick-list{
+					height:100%;
+					.slick-track{
+						height: 100%;
+					}
+				  }
+				  .slick-slide{
+					div{
+					  height:100%;
+					}
+				  }	
+				  .slick-dots{
+					  bottom: 80px;
+				  }
+			}
+
+
+			.carousel{
+				background: url("../../img/computeBanner.jpg") no-repeat;
+			}
+			.carousel2{
+				background: url("../../img/coordinate.jpg") no-repeat;
+			}
+			.carousel3{
+				.wrap-mask{
+					height:100%;
+					width:100%;
+					background: rgba(0,0,0,.4);
+				}
+				background: url("../../img/couldbar.jpg") no-repeat;
+			}
+			.carousel4{
+				background: url("../../img/diagBanner.jpg") no-repeat;
+			}
+			.carousel5{
+				background: url("../../img/intellBanner.jpg") no-repeat;
+			}
+			.carousel,.carousel2,.carousel3,.carousel4,.carousel5{
+				background-size:100% 100%;
+				height: 100%;
+				position: relative;
+				section{
+					position: absolute;
+					top:0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					margin: auto;
+					height: 160px;
+					width: 680px;
+					p{
+						color: #fff;
+						height: 20px;
+						line-height: 20px;
+						text-align: center;
+					}
+					p.linearColor{
+						// color: #12e1cd;
+						font-size: 28px;
+						height: 40px;
+						line-height: 40px;
+					}
+				}
+			}
+		}
+			
 	}
 	.baner-content{
 		width: 500px;

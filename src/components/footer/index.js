@@ -24,36 +24,41 @@ export default class Footer extends Component {
                             <span>联系我们</span>
                         </div>
                         <div className="footTitle small">
-                            <span><a href="http://www.miningcloud.com.cn/container/BaseCloud" target='_blank'>基础云服务</a></span>
+                            {/* <span><a href="http://www.miningcloud.com.cn/container/BaseCloud" target='_blank'>基础云服务</a></span> */}
+                            <span><a href="http://www.miningcloud.com.cn/container/compute" target='_blank'>云超算</a></span>
                             <span><a href="http://mim.miningcloud.com.cn" target='_blank'>MIM协同平台</a></span>
                             <span><a href="http://www.miningcloud.com.cn/console" target='_blank'>管理控制台</a></span>
                             <span><a href="http://www.enfi.com.cn/" target='_blank'>中国恩菲</a></span>
                             <span><span className="icon icon1"></span><span style={{ paddingLeft: '30px' }}>010-63936496</span></span>
                         </div>
                         <div className="footTitle small">
-                            <span><a href="http://www.miningcloud.com.cn/container/compute" target='_blank'>云超算</a></span>
-                            <span><a href="http://www.miningcloud.com.cn/container/min3DMine" target='_blank'>MIM三维可视化平台</a></span>
+                           <span><a href="http://www.miningcloud.com.cn/container/onsoft" target='_blank'>云软件</a></span>
+                            <span><a href="http://www.miningcloud.com.cn/container/min3DMine" target='_blank'>MIM智慧管控平台</a></span>
                             <span><a href="http://web.miningcloud.com.cn:8031/register" target='_blank'>账号注册</a></span>
                             <span><a href="https://www.nscc-tj.cn/" target='_blank'>国家超算天津中心</a></span>
                             <span><span className="icon icon2"></span> <span style={{ paddingLeft: '30px' }}>CMIC@enfi.com.cn</span></span>
                         </div>
                         <div className="footTitle small">
-                            <span><a href="http://www.miningcloud.com.cn/container/onsoft" target='_blank'>云软件</a></span>
-                            <span><a href="http://equip.miningcloud.com.cn" target='_blank'>矿业装备数据</a></span>
+                        {/* http://techinfo.miningcloud.com.cn */}
+                            <span>资讯研报</span>
+                            <span>数据分析平台</span>
                             <span><a href="http://www.miningcloud.com.cn/container/help" target='_blank'>帮助中心</a></span>
                             <span><a href="https://www.th-icloud.cn/" target='_blank'>天河工业云</a></span>
                             <span><span className="icon icon3"></span><span style={{ paddingLeft: '30px' }}>北京复兴路12号</span></span>
                         </div>
                         <div className="footTitle small">
-                            <span><a href="http://techinfo.miningcloud.com.cn" target='_blank'>科技信息</a></span>
-                            <span><a href="" target='_blank'>矿山设计数据</a></span>
+                        <span><a href="http://equip.miningcloud.com.cn" target='_blank'>矿业装备数据</a></span>
+                            {/* <span><a href="" target='_blank'>矿山设计数据</a></span>
+                             */}
+                             <span>人工智能</span>
                             <span><a href="http://www.miningcloud.com.cn/container/about" target='_blank'>关于我们</a></span>
                             <span><a href="mailto:CMIC@enfi.com.cn" target='_blank'>CMIC@enfi.com.cn</a></span>
                             <span></span>
                         </div>
                         <div className="footTitle small">
-                            <span><a href="https://web.miningcloud.com.cn:8046/meeting" target='_blank'>恩菲会议</a></span>
-                            <span><a href="http://economic.miningcloud.com.cn" target='_blank'>矿业经济数据</a></span>
+                        <span>MIM构件库</span>
+                            <span><a href="https://web.miningcloud.com.cn:8046/meeting" target='_blank'>视频会议</a></span>
+                            {/* <span><a href="http://economic.miningcloud.com.cn" target='_blank'>矿业经济数据</a></span> */}
                             <span></span>
                             <span></span>
                             <span></span>

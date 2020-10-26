@@ -4,6 +4,7 @@ import Headernav from "../../components/HeaderNav/index";
 import DetailHeader from "../../components/header/index";
 import Footer from "../../components/footer/index";
 import { BrowserRouter as Router, Link } from "react-router-dom"
+import { Carousel} from 'antd';
 import "./index.less"
 import "./../common/index.less"
 class Home extends Component {
@@ -77,30 +78,65 @@ class Home extends Component {
     }
     render() {
         const { match } = this.props;
-        const { Newzn, Newgj } = this.state
+        const { Newzn, Newgj } = this.state;
         return (
             <div className="body_content">
                 <DetailHeader history={this.props.history}></DetailHeader>
                 <Headernav match={match} history={this.props.history}></Headernav>
                 <div className="page_home">
                     <div className="banner cloud">
-                        <div className="baner-content">
+                    {/* autoplay */}
+                    <Carousel effect="fade" autoplay className="homebanner">
+                        <div className="carousel">
+                          <section>
+                            <p className="linearColor">云超算</p>
+                            <p>依托超级计算机强大的处理能力与天河可视化系统高效的虚拟显卡远程加速技术，将工程项目中的模型处理、</p>
+                            <p>仿真计算以及结果分析等操作集成在云端，为用户节省成本、缩短仿真计算时间。</p>
+                          </section>
+                        </div>
+                        <div className="carousel2">
+                        <section>
+                            <p className="linearColor">MIM协同平台</p>
+                            <p>以项目为核心的数字化交付，全流程协同工作</p>
+                          </section>
+                        </div>
+                        <div className="carousel3">
+                        <div class="wrap-mask"></div>
+                        <section>
+                            <p className="linearColor">MIM Transparent三维可视化平台</p>
+                            <p>以MIM为本体，以三维可视化的方式实现数据驱动的矿山综合管控</p>
+                          </section>
+                        </div>
+                        <div className="carousel4">
+                        <section>
+                            <p className="linearColor">远程诊断与大数据服务</p>
+                            <p>基于大数据分析，支持用户对接入的设备进行远程维护操作，快速定位问题。</p>
+                          </section>
+                        </div>
+                        <div className="carousel5">
+                        <section>
+                            <p className="linearColor">智能矿山</p>
+                            <p>依托中国恩菲矿山工程核心专长技术，基于矿业云提供智能矿山一站式整体解决方案</p>
+                          </section>
+                        </div>  
+                    </Carousel>
+                        {/* <div className="baner-content">
                             <h1>MIM协同平台已上线</h1>
                             <p><Link to={"/container/coordinate"}>查看详情</Link></p>
-                        </div>
-                        <div className="banner_nav_ul">
+                        </div> */}
+                        {/* <div className="banner_nav_ul">
                             <span onClick={e => { this.toPage({ path: '/container/compute', key: 'cloud:1' }) }}>云超算</span>
                             <span onClick={e => { this.toPage({ path: '/container/onsoft', key: 'cloud:2' }) }}>云软件</span>
                             <span onClick={e => { this.toPage({ path: '/container/min3DMine', key: 'MI:2' }) }}>MIM三维可视化</span>
                             <span><a href="http://equipment.miningcloud.com.cn" target='_blank'>矿业装备数据</a></span>
                             <span><a href="http://design.miningcloud.com.cn" target='_blank'>矿山设计数据</a></span>
                             <span><a href="http://meeting.miningcloud.com.cn" target='_blank'>恩菲会议</a></span>
-                            {/* <span><a href="http://10.30.0.172:8060/register"  target='_blank'>MIM协同平台</a></span> */}
-                        </div>
+                            <span><a href="http://10.30.0.172:8060/register"  target='_blank'>MIM协同平台</a></span>
+                        </div> */}
                     </div>
                     <div className="cloud_paltform">
                         <div className="w">
-                            <h2 className="homeFontWeight">软件云服务</h2>
+                            <h2 className="homeFontWeight">云超算</h2>
                             <span>高性能仿真和专业软件SaaS云平台</span>
                             <p className="whole" onClick={e => { this.handClick("rjy") }}>查看全部</p>
                             <ul className="productionLists">
@@ -219,29 +255,29 @@ class Home extends Component {
                             <div className='zj-left'>
 
                                 <div className="imgwrap">
-                                    <a href="http://techinfo.miningcloud.com.cn/" target='_blank'>
+                                    <a>
                                         <span className="img"></span>
-                                        <span className="text">科技信息</span>
+                                        <span className="text">资讯研报</span>
                                     </a>
                                 </div>
 
                                 <div className="imgwrap">
-                                    <a href="http://economic.miningcloud.com.cn/" target='_blank'>
+                                    <a href="http://web.miningcloud.com.cn:8034/" target='_blank'>
                                         <span className="img"></span>
-                                        <span className="text">矿业经济数据</span>
+                                        <span className="text">矿业装备数据</span>
                                     </a>
 
                                 </div>
                                 <div className="imgwrap">
-                                    <a href="http://equip.miningcloud.com.cn" target='_blank'>
-                                        <span className="img"></span>
-                                        <span className="text">矿业设备数据</span>
-                                    </a>
-                                </div>
-                                <div className="imgwrap">
-                                    <a href="javascript:void(0)" target='_blank' onClick={e => this.alertEvent()}>
+                                    <a>
                                         <span className="img"></span>
                                         <span className="text">矿山设计数据</span>
+                                    </a>
+                                </div>
+                                <div className="imgwrap">
+                                    <a>
+                                        <span className="img"></span>
+                                        <span className="text">MIM构件库</span>
                                     </a>
 
                                 </div>
@@ -276,7 +312,7 @@ class Home extends Component {
                                 </div>
                                 <div className='mxItem'  onClick={e => { this.toPage({ path: '/container/min3DMine', key: 'MI:2' }) }}>
                                     <img src={require("../../img/ksswpt.png")} />
-                                    <p>MIM三维可视化平台</p>
+                                    <p>MIM智慧管控</p>
                                 </div>
                                 <div className='mxItem'  onClick={e => { this.toPage({ path: '/container/minvam', key: 'MI:3' }) }}>
                                     <img src={require("../../img/VRARMR@2x.png")} />
@@ -287,8 +323,8 @@ class Home extends Component {
                     </div>
                     <div className='ycjs'>
                         <div className='w'>
-                            <h2>远程技术服务</h2>
-                            <p>ROMOTE THCHNICAL <br />SERVICE</p>
+                            <h2>工业互联网</h2>
+                            <p>INDUSTRIAL <br />INTERNET</p>
                             <div className='dbx'>
                                 <div className='dbxItem dbxItem1'>
                                     <div className="div0" onClick={e => { this.toPage({ path: '/container/diagnosis', key: 'MIM:5' }) }}>
@@ -406,7 +442,7 @@ class Home extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="news">
+                    {/* <div className="news">
                         <div className="news_title">
                             <h2 className="homeFontWeight">行业资讯</h2>
                             <a className='gdMore' href="" onClick={e => { this.toPage({ path: '/container/new', key: '' }) }}>更多+</a>
@@ -424,7 +460,7 @@ class Home extends Component {
                                                 return (
                                                     <li key={index} onClick={e => this.GoLink(item.id)}>
                                                         <span className="title">{item.title}</span>
-                                                        <span>{item.pure_content.replace(/^\s*/, "").substring(0, 35)}</span>
+                                                        <span>{item.pure_content}</span>
                                                     </li>
                                                 )
                                             })
@@ -444,7 +480,7 @@ class Home extends Component {
                                                 return (
                                                     <li key={index} onClick={e => this.GoLink(item.id)}>
                                                         <span className="title">{item.title}</span>
-                                                        <span>{item.pure_content.replace(/^\s*/, "").substring(0, 35)}</span>
+                                                        <span>{item.pure_content}</span>
                                                     </li>
                                                 )
                                             })
@@ -453,7 +489,7 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <Footer></Footer>
             </div>
