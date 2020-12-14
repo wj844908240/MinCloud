@@ -141,7 +141,7 @@ class RegistrationForm extends React.Component {
 
     pwdInput() {
         let phone = TOOlS.trim(this.refs.phone.value);
-        let phoneReady = !!(phone.substr(0, 11)).match(/^1[34578]\d{9}$/g)
+        let phoneReady = !!(phone.substr(0, 11)).match(/^1[345678]\d{9}$/g)
         this.setState({
             phoneReady
         })
