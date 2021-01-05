@@ -21,7 +21,7 @@ export default class Header extends Component {
                     <div className="h_right">
                         <ul>
                             {/* <li><a href="http://www.miningcloud.com.cn/console/">管理控制台</a>|</li> */}
-                            <li><a href="http://web.miningcloud.com.cn:8031/">管理控制台</a>|</li>
+                            <li><a href="http://digital.miningcloud.com.cn:8031/">管理控制台</a>|</li>
                             <li onClick={e=>this.handClick()}><Link to={"/container/new"}>行业资讯</Link>|</li>
                             <li onClick={e=>this.handClick()}><Link to={"/container/help"}>帮助中心</Link>|</li>
                             <li onClick={e=>this.handClick()}><Link to={"/container/about"}>关于我们</Link></li>

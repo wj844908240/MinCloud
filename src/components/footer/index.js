@@ -26,7 +26,7 @@ export default class Footer extends Component {
                         <div className="footTitle small">
                             {/* <span><a href="http://www.miningcloud.com.cn/container/BaseCloud" target='_blank'>基础云服务</a></span> */}
                             <span><a href="http://www.miningcloud.com.cn/container/compute" target='_blank'>云超算</a></span>
-                            <span><a href="http://mim.miningcloud.com.cn" target='_blank'>MIM协同平台</a></span>
+                            <span><a href="http://digital.miningcloud.com.cn:8032/" target='_blank'>MIM协同平台</a></span>
                             <span><a href="http://www.miningcloud.com.cn/console" target='_blank'>管理控制台</a></span>
                             <span><a href="http://www.enfi.com.cn/" target='_blank'>中国恩菲</a></span>
                             <span><span className="icon icon1"></span><span style={{ paddingLeft: '30px' }}>010-63936496</span></span>
