@@ -29,7 +29,7 @@ class Mincoordinate extends Component {
         document.documentElement.scrollTop = document.body.scrollTop = 0;
     }
     GoPrint() {
-        window.location.href = "http://digital.miningcloud.com.cn:8032/";
+        window.location.href = "http://digital.miningcloud.com.cn:8032";
 		// TOOLS.get("user/is_logined/").then(res => {
 		// 	if (res.status === 200) {
 		// 		if (res.data.is_logined === true) {

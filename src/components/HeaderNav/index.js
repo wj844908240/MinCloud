@@ -68,7 +68,7 @@ export default class Header extends Component {
         expires.setDate(Date.now() + 60 * 60 * 24 * 7)
         var list = { from: window.location.href }
         cookie.save('user_from', list);
-        window.location = 'http://web.miningcloud.com.cn:8031/';
+        window.location = 'http://digital.miningcloud.com.cn:8031/';
         // this.setState({
         //     current: "",
         // });
@@ -80,7 +80,7 @@ export default class Header extends Component {
         expires.setDate(Date.now() + 60 * 60 * 24 * 7)
         var list = { from: window.location.href }
         cookie.save('user_from', list);
-        window.location = 'http://web.miningcloud.com.cn:8031/register'
+        window.location = 'http://digital.miningcloud.com.cn:8031//register'
         // this.setState({
         //     current: "",
         // });
@@ -88,7 +88,7 @@ export default class Header extends Component {
         // this.props.history.push("/register")
     }
     goUserCenter() {
-        window.location = 'http://web.miningcloud.com.cn:8031/'
+        window.location = 'http://digital.miningcloud.com.cn:8031/'
         // this.props.history.push("/user")
     }
     outLogin() {
@@ -129,7 +129,7 @@ export default class Header extends Component {
         }
     }
     toPage() {
-        window.location = 'http://web.miningcloud.com.cn:8031';
+        window.location = 'http://digital.miningcloud.com.cn:8031/';
     }
     alertEvent() {
         alert("升级维护中")
