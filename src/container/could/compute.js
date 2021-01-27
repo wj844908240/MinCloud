@@ -33,7 +33,7 @@ class Cloud extends Component {
 				<div className="computing-could banner computeBanner noPadding">
 					<div className="info computeInfo" style={{backgroundColor:'transparent'}}>
 						<div className="innerText">
-							<div className="title"><h2 className="linearColor" text="云超算">云超算</h2></div>
+							<div className="title"><h2 className="linearColor" text="超算云服务">超算云服务</h2></div>
 							<div className="text"><p>依托超级计算机强大的处理能力与天河可视化系统高效的虚拟显卡远程加速技术，将工程项目中<br/>的模型处理、仿真计算以及结果分析等操作集成在云端，为用户节省成本、缩短仿真计算时间。</p></div>
 							<div className="link"><Button size={size} type="primary" onClick={e => this.GoPrint()} id="customBtn" type="primary">立即使用</Button></div>
 						</div>

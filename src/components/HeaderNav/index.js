@@ -129,7 +129,7 @@ export default class Header extends Component {
         }
     }
     toPage() {
-        window.location = 'http://digital.miningcloud.com.cn:8031/';
+        window.location = 'http://www.miningcloud.com.cn/console';
     }
     alertEvent() {
         alert("升级维护中")
@@ -178,8 +178,8 @@ export default class Header extends Component {
                     {/*<Menu.Item key="cloud"><Link to={"/container/could"}>软件云服务</Link></Menu.Item>*/}
                     <SubMenu title={<span className="submenu-title-wrapper">云计算</span>}>
                         <Menu.Item className="itemMenu" key="cloud:3"><Link to={"/container/BaseCloud"}>基础云服务</Link></Menu.Item>
-                        <Menu.Item className="itemMenu" key="cloud:1"><Link to={"/container/compute"}>云超算</Link></Menu.Item>
-                        <Menu.Item className="itemMenu" key="cloud:2"><Link to='/container/onsoft'>云软件</Link></Menu.Item>
+                        <Menu.Item className="itemMenu" key="cloud:1"><Link to={"/container/compute"}>超算云服务</Link></Menu.Item>
+                        {/* <Menu.Item className="itemMenu" key="cloud:2"><Link to='/container/onsoft'>云软件</Link></Menu.Item> */}
                     </SubMenu>
                     <SubMenu className="faMenu" title={<span className="submenu-title-wrapper" onClick={e => this.updateState({ key: 'model:3' })}><Link to={"/container/zsk"}>矿业库</Link></span>}>
                         {/* <Menu.Item key="model:7"></Menu.Item> */}
@@ -187,12 +187,12 @@ export default class Header extends Component {
                         <Menu.Item className="itemMenu" key="model:2"><Link to={"/container/Know"}>知识库</Link></Menu.Item> */}
                         {/* <Menu.Item className="itemMenu" key="model:3"><Link to={"/container/model"}>科技信息</Link></Menu.Item> */}
                         {/* <Menu.Item className="itemMenu" key="model:3"><a href='http://techinfo.miningcloud.com.cn/' target='_blank'>科技信息</a></Menu.Item> */}
-                        <Menu.Item className="itemMenu" key="model:3"><a>资讯研报</a></Menu.Item>
                         <Menu.Item className="itemMenu" key="model:5"><a href='http://equip.miningcloud.com.cn' target='_blank'>矿业装备数据</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="model:6"><a onClick={e => this.alertEvent()}>矿山设计数据</a></Menu.Item>
+                        {/* <Menu.Item className="itemMenu" key="model:6"><a onClick={e => this.alertEvent()}>矿山设计数据</a></Menu.Item> */}
                         {/* <Menu.Item className="itemMenu" key="model:4"><a href='http://economic.miningcloud.com.cn/' target='_blank'>矿业经济数据</a></Menu.Item> */}
-                        <Menu.Item className="itemMenu" key="model:7"><a>MIM构件库</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="model:8"><a>供需对接</a></Menu.Item>
+                        {/* <Menu.Item className="itemMenu" key="model:7"><a>MIM构件库</a></Menu.Item> */}
+                        <Menu.Item className="itemMenu" key="model:8"><a href='http://web.miningcloud.com.cn:8033' target='_blank'>矿业经济数据</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="model:3"><a href='http://techinfo.miningcloud.com.cn' target='_blank'>行业资讯</a></Menu.Item>
                     </SubMenu>
                     {/*<SubMenu title={<span className="submenu-title-wrapper">供需对接</span>}>
                         <Menu.Item key="commodity:1"><Link to={"/container/commodity"}>工业产品</Link></Menu.Item>
@@ -201,7 +201,7 @@ export default class Header extends Component {
                         <Menu.Item key="commodity:4"><Link to={"/container/company"}>企业展示</Link></Menu.Item>
                     </SubMenu>*/}
                     <SubMenu className="faMenu" title={<span className="submenu-title-wrapper" onClick={e => this.updateState({ key: 'MI:0' })}><Link to={"/container/Minindex"}>MIM</Link></span>}>
-                        <Menu.Item className="itemMenu" key="MI:0"><Link to={"/container/consultDesign"}>MIM咨询设计</Link></Menu.Item>
+                        <Menu.Item className="itemMenu" key="MI:0"><Link to={"/container/consultDesign"}>MIM工程设计云</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MI:1"><Link to={"/container/coordinate"}>MIM协同平台</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MI:2"><Link to={"/container/min3DMine"}>MIM智慧管控</Link></Menu.Item>
                         {/* <Menu.Item className="itemMenu" key="MI:3"><Link to={"/container/minvam"}>VR/AR/MR</Link></Menu.Item> */}
@@ -210,6 +210,7 @@ export default class Header extends Component {
                         <Menu.Item className="itemMenu" key="MIM:4"><Link to={"/container/acquisite"}>智能数据采集</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MIM:5"><Link to={"/container/diagnosis"}>大数据分析</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MIM:1"><a>人工智能</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="MIM:3"><a>企业运营决策系统</a></Menu.Item>
                         <Menu.Item className="itemMenu" key="MIM:2"><a href='https://web.miningcloud.com.cn:8046/meeting' target='_blank'>视频会议</a></Menu.Item>
                     </SubMenu>
                     <SubMenu className="faMenu" title={<span className="submenu-title-wrapper" onClick={e => this.updateState({ key: 'big:1' })}><Link to={"/container/Intelligentindex"}>智能矿山</Link></span>}>

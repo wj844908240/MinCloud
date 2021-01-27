@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import axios from "axios";
-import {LocaleProvider} from 'antd';
+import {ConfigProvider} from 'antd';
 import Route from "./components/baseRoute"
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import rootRoute from "./route/routes"
@@ -43,11 +43,11 @@ class App extends Component {
     }
     render() {
         return (
-            <LocaleProvider  locale={zhCN}>
+            <ConfigProvider  locale={zhCN}>
                 <Router>
                     <Route path="/" component={rootRoute}/>
                 </Router>
-            </LocaleProvider >
+            </ConfigProvider >
 
         );
     }

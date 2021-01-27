@@ -145,7 +145,7 @@ class DemanDdetail extends Component  {
                   <h3>相关资料</h3>
                   <table id="table">
                     <thead>
-                      <tr class="info">
+                      <tr className="info">
                         <th width="20%">文件名</th>
                         <th width="10%">格式</th>
                         <th width="10%">版本</th>

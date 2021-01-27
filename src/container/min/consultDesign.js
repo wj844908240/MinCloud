@@ -21,8 +21,8 @@ class Minindex extends Component {
 			<div className="cloud_conten">
 				<div className="computing-could banner" id="consultDesign">
 					<div className="content">
-					<h2 style={{padding:'10px 0px',margin:0}}>MIM.Design三维设计软件</h2>
-					<span>以MIM为核心的矿山三维设计，集成行业领先的专业技术</span>
+					<h2 style={{padding:'10px 0px',margin:0}}>MIM工程设计云</h2>
+					<span>以MIM为核心的矿山工程数字化设计，集成行业领先的专业技术知识</span> 
 					</div>
 				</div>
 
