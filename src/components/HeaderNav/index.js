@@ -209,8 +209,8 @@ export default class Header extends Component {
                     <SubMenu title={<span className="submenu-title-wrapper">工业互联网</span>}>
                         <Menu.Item className="itemMenu" key="MIM:4"><Link to={"/container/acquisite"}>智能数据采集</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MIM:5"><Link to={"/container/diagnosis"}>大数据分析</Link></Menu.Item>
-                        <Menu.Item className="itemMenu" key="MIM:1"><a>人工智能</a></Menu.Item>
-                        <Menu.Item className="itemMenu" key="MIM:3"><a>企业运营决策系统</a></Menu.Item>
+                        <Menu.Item className="itemMenu" key="MIM:1"><Link to={"/container/Intelligence"}>人工智能</Link></Menu.Item>
+                        <Menu.Item className="itemMenu" key="MIM:3"><Link to={"/container/decision"}>企业运营决策系统</Link></Menu.Item>
                         <Menu.Item className="itemMenu" key="MIM:2"><a href='https://web.miningcloud.com.cn:8046/meeting' target='_blank'>视频会议</a></Menu.Item>
                     </SubMenu>
                     <SubMenu className="faMenu" title={<span className="submenu-title-wrapper" onClick={e => this.updateState({ key: 'big:1' })}><Link to={"/container/Intelligentindex"}>智能矿山</Link></span>}>

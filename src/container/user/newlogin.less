@@ -1,0 +1,158 @@
+.login-body {
+    width: 100%;
+    height: 100vh;
+    background: #F5F5F5;
+  
+    .login {
+      min-width: 720px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url("../../img/login_bg.png") no-repeat center center;
+      background-size: contain;
+    }
+  
+    .login-mask {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background: rgba(9, 16, 32, 0.8);
+      flex-direction: column !important;
+    }
+  
+    .flex_all {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .center {
+      width: 720px;
+      height: 400px;
+  
+      .left {
+        width: 280px;
+        height: 240px;
+        background: rgba(0, 33, 175, 0.7);
+        border-radius: 6px;
+        flex-direction: column;
+  
+        .slogn {
+          color: #fff;
+          font-size: 18px;
+          letter-spacing: 1px;
+          font-weight: bolder;
+          padding: 5px 0px;
+        }
+  
+        .icon {
+          color: #fff;
+          height: 30px;
+          width: 95px;
+          background: url("../../img/login_icon.png") no-repeat center center;
+          background-size: contain;
+        }
+      }
+  
+      .right {
+        width: 400px;
+        height: 360px;
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: -2px 0px 20px #000;
+        flex-direction: column !important;
+  
+        .content {
+          width: 80%;
+          margin: 0 auto;
+        }
+  
+        .title {
+          font-size: 16px;
+          font-weight: bolder;
+          width: 100%;
+          text-align: center;
+          padding: 20px 0px;
+          margin-bottom: 20px;
+        }
+  
+        .tabsel {
+          width: 100%;
+  
+          .ant-input-affix-wrapper:focus,
+          .ant-input-affix-wrapper-focused {
+            border-top-width: 0px !important;
+            border-left-width: 0px !important;
+            border-right-width: 0px !important;
+            outline: none !important;
+            box-shadow: none !important;
+            border-radius: 0px
+          }
+  
+          .ant-input-affix-wrapper {
+            border-top-width: 0px;
+            border-left-width: 0px;
+            border-right-width: 0px;
+            outline: none !important;
+            box-shadow: none !important;
+            border-radius: 0px
+          }
+  
+          .ant-input-affix-wrapper:hover {
+            border-top-width: 0px !important;
+            border-left-width: 0px !important;
+            border-right-width: 0px !important;
+            outline: none !important;
+            box-shadow: none !important;
+            border-radius: 0px
+          }
+  
+          .login-form-forgot {
+            float: right;
+          }
+  
+          .ant-col-rtl .login-form-forgot {
+            float: left;
+          }
+  
+          .login-form-button {
+            width: 100%;
+          }
+  
+          .ant-input-prefix {
+            margin-right: 15px;
+          }
+          .register{
+            margin-top: 20px;
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            .anticon-double-left{
+              vertical-align: middle;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  
+    .company {
+      width: 200px;
+      height: 18px;
+      color: #fff;
+      position: absolute;
+      bottom: 10%;
+      right: 0;
+      left: 0;
+      margin: auto;
+  
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: url("../../img/login_fullname.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }

@@ -1,0 +1,122 @@
+.box{
+    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+}
+.flexbox{
+    -webkit-flex: 1;        /* Chrome */  
+    -ms-flex: 1 ;            /* IE 10 */  
+    flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 1;  /* OLD - iOS 6-, Safari 3.1-6 */  
+	-moz-box-flex: 1;       /* OLD - Firefox 19- */  
+}
+.cloud_conten{
+	.decision{
+		background: url("../../img/decisionBanner.png");
+		background-repeat:no-repeat;
+		background-size: cover;
+        background-position: center center;
+        padding: 0px !important;
+    }
+	.server{
+		height: 640px;	
+		background-color: #f8f8f8;
+		overflow: hidden;
+		.ant-row{
+			height: 100%;
+			.ant-col-5{
+				height: 100%;
+				.leftpng{
+					width: 17vw;
+					height:28vw; 
+					background: url(../../img/circuit.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: 0px -131px;
+					min-width: 230px;
+					min-height: 380px;
+				}
+			}
+			.ant-col-5.right{
+				position: relative;
+				.rightpng{
+					position: absolute;
+					left: 70px;
+					top: 200px;
+					display: inline-block;
+					vertical-align: middle;
+					width: 17vw;
+					height:18vw; 
+					min-width: 231px;
+					min-height: 245px;
+					background: url(../../img/gear.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					// background-position: 194px 0;
+				}
+			}
+			.ant-col-14.content{
+				position: relative;
+				margin: 32px 0;
+				.content-img{
+					width: 800px;
+					margin: 0 auto;
+					display: flex;
+					justify-content:space-between;
+					align-items:center;
+				}
+				.ant-image{
+					display: block;
+					margin-bottom: 40px;
+				    box-shadow: 0px 5px 20px 8px rgba(0, 0, 0, 0.3)
+				}
+				.step{
+					display: flex;
+					justify-content:flex-start;
+					align-items:center;
+					.circle{
+						width: 30px;
+						height: 30px;
+						background-color: #cea622;
+						border-radius: 4px;
+						margin-left: 20px;
+						display: flex;
+						justify-content:center;
+						align-items:center;
+						.innercircle{							
+							width:20px;
+							height: 20px;
+							border-radius: 20px;
+							text-align: center;
+							line-height: 20px;
+							background-color: #02598f;
+							color: #fff;
+						}
+					}
+				}
+				.text{
+					margin-left: 20px;
+					color: #02598f;
+				}
+				.line_divider_critical{
+					background-color: #02598f;
+					width: 4px;
+					height: 60px;
+					position: relative;
+				}
+				.line_divider_critical::after{
+					content:"";
+					width: 10px;
+					height: 10px;
+					border-radius: 4px;
+					background-color: #cea622;
+					position: absolute;
+					top: 25px;
+					left: -3px;
+				}
+			}
+		}
+	}
+}   
