@@ -12,19 +12,65 @@ class BaseCloud extends Component  {
 	componentWillMount() {
 		document.documentElement.scrollTop = document.body.scrollTop = 0;
 	}
+	// GoPrint() {
+	// 	TOOLS.get("user/is_logined/").then(res => {
+	// 		if (res.status === 200) {
+	// 			if (res.data.is_logined === true) {
+	// 				window.location.href = "https://cloud.nscc-tj.cn"
+	// 			} else {
+	// 				this.props.history.push("/login")
+	// 				// 页面刷新
+	// 				window.location.reload()
+	// 			}
+	// 		}
+	// 	})
+	// }
+	
 	GoPrint() {
-		TOOLS.get("user/is_logined/").then(res => {
-			if (res.status === 200) {
-				if (res.data.is_logined === true) {
-					window.location.href = "https://cloud.nscc-tj.cn"
-				} else {
-					this.props.history.push("/login")
-					// 页面刷新
-					window.location.reload()
-				}
+		if (document.cookie && document.cookie != '') {
+			var cookies = document.cookie.split(';');
+			var name1 = 'user_token'
+			var name2 = 'child_sys_userInfo'
+			var info = {
+				user_token: '',
+				child_sys_userInfo: ''
 			}
-		})
+			for (let i = 0; i < cookies.length; i += 1) {
+				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
+				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
+					info.user_token = cookieValue                   
+				}
+				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
+					info.child_sys_userInfo = cookieValue                    
+				}   
+			}
+
+			if (info.user_token != "" && info.child_sys_userInfo != "") {
+				TOOLS.post("user/is_logined/", info).then(res => {
+					if (res.status === 200) {
+						if (res.data.is_logined === true) {
+							window.location.href = "https://cloud.nscc-tj.cn"
+						} else {
+							// this.props.history.push("/login")
+							// 页面刷新
+							// window.location.reload()
+							document.cookie = "user_from_mianPage=https://cloud.nscc-tj.cn;domain=miningcloud.com.cn"
+							window.location.href = "http://digital.miningcloud.com.cn:8031/"
+						}
+					}
+				})
+			} else {
+				document.cookie = "user_from_mianPage=https://cloud.nscc-tj.cn;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031/"
+			}
+		} else {
+				document.cookie = "user_from_mianPage=https://cloud.nscc-tj.cn;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031/"			
+		}
 	}
+	
 	render(){
 		return(
 			<div className="cloud_conten">
