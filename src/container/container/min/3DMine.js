@@ -5,7 +5,8 @@ import "../could/index.less";
 import "./index.less";
 import "./minDesign.less";
 import "./../common/index.less"
-class Minindex extends Component {
+
+class Min3DMine extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -19,10 +20,10 @@ class Minindex extends Component {
 		const { size } = this.state;
 		return (
 			<div className="cloud_conten">
-				<div className="computing-could banner" id="consultDesign">
-					<div className="content">
-					<h2 style={{padding:'10px 0px',margin:0}}>MIM.Design三维设计软件</h2>
-					<span>以MIM为核心的矿山三维设计，集成行业领先的专业技术</span>
+				<div className="computing-could banner">
+					<div className="info">
+						<div className="title"><h2>MIM Transparent三维可视化平台</h2></div>
+						<div className="text"><span>以MIM为本体，以三维可视化的方式实现数据驱动的矿山综合管控</span></div>
 					</div>
 				</div>
 
@@ -36,18 +37,18 @@ class Minindex extends Component {
 									<Col className="ant-col" span={12}>
 										<div className="content">
 											<div className="word">
-												<div className="headline" ><span>以三维形式高效而精确地表达设计意图</span></div>
+												<div className="headline" ><span>全系统实时数据集成</span></div>
 												<ul>
-													<li>使用MIM.Design软件生成基于模型的矿山设计和文档</li>
-													<li>三维模型集成各类工程信息</li>
-													<li>三维模型关联二维图纸，通用熟悉的操作方式</li>
+													<li>快速高效构建矿山三维场景，真实再现矿山运行环境和物理工况</li>
+													<li>多种数据接入方式，集成矿山各系统多源异构数据融合</li>
+													<li>建立资源共享一体化机制，实现各业务数据共享，协同办公</li>
 												</ul>
 											</div>
 										</div>
 									</Col>
 									<Col className="ant-col" span={12}>
 										<div className="imgContent">
-											<div className="img1"></div>
+											<div className="img9 flex_right"></div>
 										</div>
 									</Col>
 								</Row>
@@ -62,19 +63,19 @@ class Minindex extends Component {
 							<Col className="ant-col" span={14}>
 								<Row>
 									<Col className="ant-col" span={12}>
-										<div className="imgContent" >
-											<div className="img2"></div>
+										<div className="imgContent">
+											<div className="img10"></div>
 										</div>
 
 									</Col>
 									<Col className="ant-col" span={12}>
 										<div className="content">
-											<div className="word flex_right conDes">
-												<div className="headline" ><span>使用MIM.Design进行分析和仿真</span></div>
+											<div className="word  flex_right conDes">
+												<div className="headline" ><span>三维可视化管理</span></div>
 												<ul>
-													<li>集成专业工具和工作流程</li>
-													<li>丰富的数据接口，与其他专业软件进行连接</li>
-													<li>三维可视化和基于云的数据分析</li>
+													<li>将三维场景模型与实时数据融合，交互式查询</li>
+													<li>可视化设备管理与应急指挥</li>
+													<li>多形式报表提高总结效率</li>
 												</ul>
 											</div>
 										</div>
@@ -93,18 +94,19 @@ class Minindex extends Component {
 									<Col className="ant-col" span={12}>
 										<div className="content">
 											<div className="word">
-												<div className="headline" ><span>基于矿业云平台进行设计工作</span></div>
-												<ul>
-													<li>基于矿业数据库提高设计效率和标准化</li>
-													<li>文件远端存储，多人协同工作</li>
-													<li>与MIM协同平台连接，完成数字化交付</li>
-												</ul>
+											<div className="headline" ><span>挖掘数据价值</span></div>
+											<ul>
+												<li>海量数据的分布式存储与处理</li>
+												<li>基于人工智能的数据分析计算能力</li>
+												<li>设备诊断、系统优化、辅助决策</li>
+											</ul>
 											</div>
+
 										</div>
 									</Col>
 									<Col className="ant-col" span={12}>
 										<div className="imgContent">
-											<div className="img3  flex_right"></div>
+											<div className="img11 flex_right"></div>
 										</div>
 									</Col>
 								</Row>
@@ -119,4 +121,4 @@ class Minindex extends Component {
 		)
 	}
 };
-export default Minindex;
+export default Min3DMine;

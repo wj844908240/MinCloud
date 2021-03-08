@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import {BrowserRouter as Router, Link} from "react-router-dom"
 import Search from "../../components/search/index"
 import List from "../../components/clist/list"
 import TOOLS from "../../assets/tools/tools";
 import "./index.less"
 import Utils from "../../assets/tools/utils";
-import {Carousel,Tabs } from 'antd';
+import {Carousel ,Tabs, message} from 'antd';
 import LoadingCmpt from "../../components/loading/index"
 import "./../common/index.less"
 const TabPane = Tabs.TabPane;
@@ -12,7 +13,7 @@ class DemanDdetail extends Component  {
   constructor(props) {
     super(props);
     this.state = {
-      Keyword: TOOLS.storage.get("Keyword") !=="" ? TOOLS.storage.get("Keyword"): "",
+      Keyword: "",
       isLoading:true,
       DataList:[],
       pageIndex: 1,
@@ -44,38 +45,50 @@ class DemanDdetail extends Component  {
         });
       }
     }) 
-  }
-  Related(){
-    //请求供关注
-    TOOLS.get("concern_itn/").then(res => {
+    /*//供需状况详情列表
+    TOOLS.get(`supplyservice/enterpriseauth/${id}/`).then(res => {
       if(res.status === 200){
-        if(res.data.data === "true"){
-            this.setState({
-              is_followed:true,
-            });
-        }else{
-          this.setState({
-              is_followed:false,
-            });
-        }
+
       }
+    }) */
+  }
+  
+
+  Related(){
+    const id = Utils.getUrlParams().id
+    //请求供关注
+    let followed = false
+    this.state.is_followed === true? followed: followed=true
+    TOOLS.put(`enterpriseauth/${id}/follow/`,{
+      is_followed:followed
+    }).then(res => {
+      if(res.status === 200){
+        this.setState({
+          is_followed:res.data.is_followed,
+        });
+      }
+    }).catch(error => {
+      message.warning("请登录后关注！")
     }) 
   }
   GoPrint(){
-    if(sessionStorage.getItem("isLogin") === "true"){
-      window.location.href="http://www.miningcloud.com.cn/console/"
-    }else{
-      this.props.history.push("/container/register")
-    } 
+    TOOLS.get("user/is_logined/").then(res => {
+      if(res.status === 200){
+        if(res.data.is_logined===true){
+          window.location.href="http://www.miningcloud.com.cn/console/"
+        }else{
+          this.props.history.push("/container/register")
+        }
+      }
+    })
   }
   render(){
     const {DataList,is_followed,RelatedList} = this.state
-
     return(
       <div className='Model clearfix'>
           <div className="addr clearfix">
             <div className="m_left">
-              <span onClick={e=>{window.location.href='/'}}>首页</span>&gt;<span  onClick={e=>{window.location.href='/container/company'}}>企业展示</span>&gt;<span className="breadcrumb">企业展示详情</span>
+              <span onClick={e=>{window.location.href='/'}}>首页</span>&gt;<span onClick={e=>{window.location.href='/container/company'}}>企业展示</span>&gt;<span className="breadcrumb">企业展示详情</span>
             </div>
             <div className="m_right">
               <button className="m_btn" onClick={e=>this.GoPrint()}>我要入驻</button>
@@ -86,19 +99,19 @@ class DemanDdetail extends Component  {
           <div className="d-content">
               <div className="model-detail">
                 <h2>{DataList.enterprise_name}</h2>
-                <Carousel autoplay>
-                  <div><img src={DataList.business_license_img}/></div>
-                  <div><img src={DataList.if_code_img}/></div>
+                <Carousel>
+                  <div><img src={DataList.logo}/></div>
+                  {/*<div><img src={DataList.if_code_img}/></div>
                   <div><img src={DataList.institution_as_legal_person_img}/></div>
-                  <div><img src={DataList.material}/></div>
+                  <div><img src={DataList.material}/></div>*/}
                 </Carousel>
                 <div className="rate">
                   <span className="q-name">企业勋章
-                    <b className={DataList.checkau === 0 ? "rz":"wrz"}>
-                      {DataList.checkau === 0 ? <b>已认证</b>:<b>未认证</b>}
+                    <b className={DataList.checkau === 2 ? "rz":"wrz"}>
+                      <b>{DataList.get_checkau_display}</b>
                     </b>
                   </span>
-                  <button className="m_btn" onClick={e=>this.Related()}>{is_followed === true ? "已关注此企业" :"关注此企业"}</button>
+                  <button className="m_btn" onClick={e=>this.Related()}>{is_followed === true ? "取消关注企业" :"关注企业"}</button>
                 </div>
                 <div className="information">
                   <Tabs type="card">
@@ -107,7 +120,7 @@ class DemanDdetail extends Component  {
                         <ul>
                           <li>
                               <div><b>所属行业：</b><span>{DataList.tags}</span></div>
-                              <div><b>企业规模：</b><span>{DataList.scale}</span></div>
+                              <div><b>企业规模：</b><span>{DataList.get_scale_display}</span></div>
                           </li>
                           <li>
                               <div><b>企业类型：</b><span>{DataList.get_type_display}</span></div>
@@ -118,7 +131,7 @@ class DemanDdetail extends Component  {
                               <div><b>邮箱：</b><span>{DataList.email}</span></div>
                           </li>
                           <li>
-                              <div><b>地址：</b><span>{DataList.detail_address}</span></div>
+                              <div><b>地址：</b><span>{DataList.province+DataList.city+DataList.area+DataList.detail_address}</span></div>
                               <div><b>网址：</b><a href={DataList.netsite} target="_blank">{DataList.netsite}</a></div>
                           </li>
                           <li>
@@ -132,45 +145,13 @@ class DemanDdetail extends Component  {
                         </ul>
                       </div>
                     </TabPane>
-                    <TabPane tab="产品列表" key="2">
-                      产品列表
-                    </TabPane>
-                    <TabPane tab="服务列表" key="3">
-                      服务列表
-                    </TabPane>
-                    <TabPane tab="求购列表" key="4">
-                      求购列表
-                    </TabPane>
                   </Tabs>
-                  <h3>相关资料</h3>
-                  <table id="table">
-                    <thead>
-                      <tr class="info">
-                        <th width="20%">文件名</th>
-                        <th width="10%">格式</th>
-                        <th width="10%">版本</th>
-                        <th width="10%">文件大小</th>
-                        <th width="15%">是否关注</th>
-                        <th width="15%">下载地址</th>
-                      </tr>
-                    </thead>
-                  <tbody>
-                    <tr> 
-                      <td>{}</td>
-                      <td>{}</td>
-                      <td>{}</td>
-                      <td>{}</td>
-                      <td>{}</td>
-                      <td>{}</td>
-                    </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
           </div>
           <div className="r_list">
             <h3>相关产品</h3>
-            <List history={this.props.history} DataList={RelatedList}/>
+            {RelatedList && RelatedList.length > 0 &&<List Addr="/container/productdetails" history={this.props.history} DataList={RelatedList}/>}
           </div>
       </div> 
     )

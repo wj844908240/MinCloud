@@ -1,0 +1,175 @@
+.box {
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+}
+
+.flexbox {
+    -webkit-flex: 1;
+    /* Chrome */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;
+    /* OLD - Firefox 19- */
+}
+
+.cloud_conten {
+    .intelligence {
+        background: url("../../img/IntelligenceBanner.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 0px !important;
+        position: relative;
+    }
+
+    .main {
+        height: 1060px;
+        background-color: #f8f8f8;
+
+        .part1 {
+            position: relative;
+            height: 400px;
+            width: 900px;
+            margin: 0 auto;
+            .tools {
+                position: absolute;
+                top: -70px;
+                width: 900px;
+                // min-width: 755px;
+                background-color: black;
+                height: 450px;
+                background: url(../../img/Intelligence_banner2.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+
+        .part2 {
+            height: 250px;
+            width: 900px;
+            margin: 0 auto;
+            .tip {
+                color: #005d97;
+                font-size: 16px;
+                font-weight: bolder;
+                width: auto;
+                position: relative;
+            }
+
+            .tip::after {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 30px;
+                width: 60px;
+                height: 5px;
+                background-color: #005d97;
+            }
+            .align_left,
+            .align_center,
+            .align_right {
+                .ant-image {
+                    margin-top: 40px;
+                }
+            }
+
+            .align_center {
+                text-align: center;
+                .tip::after{
+                    left: 55px;
+                }
+
+            }
+
+            .align_right {
+                .tip::after{
+                    left: 173px;
+                }
+                text-align: right;
+            }
+
+
+        }
+
+        .part3 {
+            height: 240px;
+            width: 900px;
+            margin: 0 auto;
+            .align_right {
+                float: right;
+                overflow: hidden;
+                p {
+                    text-indent: 28px;
+                    font-size: 14px;
+                }
+
+            }
+        }
+
+        .part4 {
+            height: 190px;
+            width: 900px;
+            margin: 0 auto;
+            p {
+                text-indent: 28px;
+                font-size: 14px;
+            }
+        }
+
+        .important_color {
+            color: #1679bd;
+        }
+
+        .ant-row {
+            .ant-col-5 {
+                .leftpng {
+                    width: 17vw;
+                    height: 28vw;
+                    background: url(../../img/circuit.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: 0px -131px;
+                    min-width: 230px;
+                    min-height: 380px;
+                }
+            }
+
+            .ant-col-5.right {
+                position: relative;
+
+                .rightpng {
+                    position: absolute;
+                    left: 70px;
+                    top: 200px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 17vw;
+                    height: 18vw;
+                    min-width: 231px;
+                    min-height: 245px;
+                    background: url(../../img/gear.png);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    // background-position: 194px 0;
+                }
+            }
+
+            .ant-col-14 {
+                position: relative;
+            }
+        }
+    }
+}
