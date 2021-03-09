@@ -13,18 +13,62 @@ class Cloud extends Component {
 	componentWillMount() {
 		document.documentElement.scrollTop = document.body.scrollTop = 0;
 	}
+	// GoPrint() {
+	// 	TOOLS.get("user/is_logined/").then(res => {
+	// 		if (res.status === 200) {
+	// 			if (res.data.is_logined === true) {
+	// 				window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+	// 			} else {
+	// 				this.props.history.push("/login")
+	// 				// 页面刷新
+	// 				window.location.reload()
+	// 			}
+	// 		}
+	// 	})
+	// }
 	GoPrint() {
-		TOOLS.get("user/is_logined/").then(res => {
-			if (res.status === 200) {
-				if (res.data.is_logined === true) {
-					window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
-				} else {
-					this.props.history.push("/login")
-					// 页面刷新
-					window.location.reload()
-				}
+		if (document.cookie && document.cookie != '') {
+			var cookies = document.cookie.split(';');
+			var name1 = 'user_token'
+			var name2 = 'child_sys_userInfo'
+			var info = {
+				user_token: '',
+				child_sys_userInfo: ''
 			}
-		})
+			for (let i = 0; i < cookies.length; i += 1) {
+				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
+				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
+					info.user_token = cookieValue                   
+				}
+				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
+					info.child_sys_userInfo = cookieValue                    
+				}   
+			}
+
+			if (info.user_token != "" && info.child_sys_userInfo != "") {
+				TOOLS.post("user/is_logined/", info).then(res => {
+					if (res.status === 200) {
+						if (res.data.is_logined === true) {
+							window.location.href = "http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+						} else {
+							// this.props.history.push("/login")
+							// 页面刷新
+							// window.location.reload()
+							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+							window.location.href = "http://digital.miningcloud.com.cn:8031"
+						}
+					}
+				})
+			} else {
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031"
+			}
+		} else {
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031"			
+		}
 	}
 	render() {
 		const { size } = this.state;
@@ -33,7 +77,7 @@ class Cloud extends Component {
 				<div className="computing-could banner computeBanner noPadding">
 					<div className="info computeInfo" style={{backgroundColor:'transparent'}}>
 						<div className="innerText">
-							<div className="title"><h2 className="linearColor" text="云超算">云超算</h2></div>
+							<div className="title"><h2 className="linearColor" text="超算云服务">超算云服务</h2></div>
 							<div className="text"><p>依托超级计算机强大的处理能力与天河可视化系统高效的虚拟显卡远程加速技术，将工程项目中<br/>的模型处理、仿真计算以及结果分析等操作集成在云端，为用户节省成本、缩短仿真计算时间。</p></div>
 							<div className="link"><Button size={size} type="primary" onClick={e => this.GoPrint()} id="customBtn" type="primary">立即使用</Button></div>
 						</div>

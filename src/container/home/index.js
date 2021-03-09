@@ -89,7 +89,7 @@ class Home extends Component {
                     <Carousel effect="fade" autoplay className="homebanner">
                         <div className="carousel">
                           <section>
-                            <p className="linearColor">云超算</p>
+                            <p className="linearColor">超算云服务</p>
                             <p>依托超级计算机强大的处理能力与天河可视化系统高效的虚拟显卡远程加速技术，将工程项目中的模型处理、</p>
                             <p>仿真计算以及结果分析等操作集成在云端，为用户节省成本、缩短仿真计算时间。</p>
                           </section>
@@ -101,7 +101,7 @@ class Home extends Component {
                           </section>
                         </div>
                         <div className="carousel3">
-                        <div class="wrap-mask"></div>
+                        <div className="wrap-mask"></div>
                         <section>
                             <p className="linearColor">MIM Transparent三维可视化平台</p>
                             <p>以MIM为本体，以三维可视化的方式实现数据驱动的矿山综合管控</p>
@@ -125,7 +125,7 @@ class Home extends Component {
                             <p><Link to={"/container/coordinate"}>查看详情</Link></p>
                         </div> */}
                         {/* <div className="banner_nav_ul">
-                            <span onClick={e => { this.toPage({ path: '/container/compute', key: 'cloud:1' }) }}>云超算</span>
+                            <span onClick={e => { this.toPage({ path: '/container/compute', key: 'cloud:1' }) }}>超算云服务</span>
                             <span onClick={e => { this.toPage({ path: '/container/onsoft', key: 'cloud:2' }) }}>云软件</span>
                             <span onClick={e => { this.toPage({ path: '/container/min3DMine', key: 'MI:2' }) }}>MIM三维可视化</span>
                             <span><a href="http://equipment.miningcloud.com.cn" target='_blank'>矿业装备数据</a></span>
@@ -136,7 +136,7 @@ class Home extends Component {
                     </div>
                     <div className="cloud_paltform">
                         <div className="w">
-                            <h2 className="homeFontWeight">云超算</h2>
+                            <h2 className="homeFontWeight">超算云服务</h2>
                             <span>高性能仿真和专业软件SaaS云平台</span>
                             <p className="whole" onClick={e => { this.handClick("rjy") }}>查看全部</p>
                             <ul className="productionLists">
@@ -255,9 +255,9 @@ class Home extends Component {
                             <div className='zj-left'>
 
                                 <div className="imgwrap">
-                                    <a>
+                                    <a  href="http://techinfo.miningcloud.com.cn" target='_blank'>
                                         <span className="img"></span>
-                                        <span className="text">资讯研报</span>
+                                        <span className="text">行业资讯</span>
                                     </a>
                                 </div>
 
@@ -271,7 +271,7 @@ class Home extends Component {
                                 <div className="imgwrap">
                                     <a>
                                         <span className="img"></span>
-                                        <span className="text">矿山设计数据</span>
+                                        <span className="text">矿业经济数据</span>
                                     </a>
                                 </div>
                                 <div className="imgwrap">
@@ -304,7 +304,7 @@ class Home extends Component {
                             <div className='moxin'>
                                 <div className='mxItem' onClick={e => { this.toPage({ path: '/container/consultDesign', key: 'MI:0' }) }}>
                                     <img src={require("../../img/mimxtpt.png")} />
-                                    <p>MIM咨询设计</p>
+                                    <p>MIM工程设计</p>
                                 </div>
                                 <div className='mxItem'  onClick={e => { this.toPage({ path: '/container/coordinate', key: 'MI:1' }) }}>
                                     <img src={require("../../img/minzusj.png")} />

@@ -45,6 +45,8 @@ import MC2019 from "../container/library/MC2019";
 import MGR2019 from "../container/library/MGR2019";
 import zsk from "../container/library/index";
 import Intelligentindex from "../container/Intelligent/index";
+import Intelligence from "../container/Intelligence/index";
+import Decision from "../container/decision/index";
 
 class CustomLinkExample extends Component {
     constructor(props, context) {
@@ -103,6 +105,8 @@ class CustomLinkExample extends Component {
                     <Route path={`${match.url}/MGR2019`} component={MGR2019}/>
                     <Route path={`${match.url}/zsk`} component={zsk}/>
                     <Route path={`${match.url}/Intelligentindex`} component={Intelligentindex}/>
+                    <Route path={`${match.url}/Intelligence`} component={Intelligence}/>
+                    <Route path={`${match.url}/decision`} component={Decision}/>
                     <Footer/>
                 </div>
             </Router>
