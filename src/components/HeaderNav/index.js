@@ -80,7 +80,7 @@ export default class Header extends Component {
         expires.setDate(Date.now() + 60 * 60 * 24 * 7)
         var list = { from: window.location.href }
         cookie.save('user_from', list);
-        window.location = 'http://digital.miningcloud.com.cn:8031//register'
+        window.location = 'http://digital.miningcloud.com.cn://register'
         // this.setState({
         //     current: "",
         // });
@@ -128,9 +128,53 @@ export default class Header extends Component {
             }
         }
     }
+    // toPage() {
+    //     window.location = 'http://www.miningcloud.com.cn/console';
+    // }
     toPage() {
-        window.location = 'http://www.miningcloud.com.cn/console';
-    }
+		if (document.cookie && document.cookie != '') {
+			var cookies = document.cookie.split(';');
+			var name1 = 'user_token'
+			var name2 = 'child_sys_userInfo'
+			var info = {
+				user_token: '',
+				child_sys_userInfo: ''
+			}
+			for (let i = 0; i < cookies.length; i += 1) {
+				var cookie = cookies[i].replace(/(^\s*)|(\s*$)/g, "");
+				if (cookie.substring(0, name1.length + 1) == (name1 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name1.length + 1));
+					info.user_token = cookieValue                   
+				}
+				if (cookie.substring(0, name2.length + 1) == (name2 + '=')) { 
+					var cookieValue = decodeURIComponent(cookie.substring(name2.length + 1));
+					info.child_sys_userInfo = cookieValue                    
+				}   
+			}
+
+			if (info.user_token != "" && info.child_sys_userInfo != "") {
+				TOOLS.post("user/is_logined/", info).then(res => {
+					if (res.status === 200) {
+						if (res.data.is_logined === true) {
+							window.location.href = "http://www.miningcloud.com.cn/console"
+						} else {
+							// this.props.history.push("/login")
+							// 页面刷新
+							// window.location.reload()
+							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
+							window.location.href = "http://digital.miningcloud.com.cn:8031"
+						}
+					}
+				})
+			} else {
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031"
+			}
+		} else {
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
+				window.location.href = "http://digital.miningcloud.com.cn:8031"			
+		}
+	}
     alertEvent() {
         alert("升级维护中")
     }
@@ -148,7 +192,7 @@ export default class Header extends Component {
             <Menu>
                 <Menu.Item className="itemMenu">
                     <span onClick={e => this.toPage()}>
-                        管理控制台
+                        制台
                     </span>
                 </Menu.Item>
                 {/* <Menu.Item className="itemMenu">
