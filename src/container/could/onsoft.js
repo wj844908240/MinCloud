@@ -61,17 +61,17 @@ class Onsoft extends Component {
 							// 页面刷新
 							// window.location.reload()
 							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-							window.location.href = "http://digital.miningcloud.com.cn:8031"
+							window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 						}
 					}
 				})
 			} else {
 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-				window.location.href = "http://digital.miningcloud.com.cn:8031"
+				window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 			}
 		} else {
 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-				window.location.href = "http://digital.miningcloud.com.cn:8031"			
+				window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"			
 		}
 	}
 	render() {

@@ -162,17 +162,17 @@ export default class Header extends Component {
 							// 页面刷新
 							// window.location.reload()
 							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
-							window.location.href = "http://digital.miningcloud.com.cn:8031"
+							window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/console"
 						}
 					}
 				})
 			} else {
 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
-				window.location.href = "http://digital.miningcloud.com.cn:8031"
+				window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/console"
 			}
 		} else {
 				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/console;domain=miningcloud.com.cn"
-				window.location.href = "http://digital.miningcloud.com.cn:8031"			
+				window.location.href = "http://digital.miningcloud.com.cn:8031?ser_from_mianPage=http://www.miningcloud.com.cn/console"			
 		}
 	}
     alertEvent() {
