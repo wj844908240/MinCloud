@@ -56,17 +56,17 @@ class Cloud extends Component {
 							// this.props.history.push("/login")
 							// 页面刷新
 							// window.location.reload()
-							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
-							window.location.href = "http://digital.miningcloud.com.cn:8031"
+							document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"
+							window.location.href = "http://digital.miningcloud.com.cn:8031?"
 						}
 					}
 				})
 			} else {
-				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 				window.location.href = "http://digital.miningcloud.com.cn:8031"
 			}
 		} else {
-				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/;domain=miningcloud.com.cn"
+				document.cookie = "user_from_mianPage=http://www.miningcloud.com.cn/gcfznew/dashboardold/"
 				window.location.href = "http://digital.miningcloud.com.cn:8031"			
 		}
 	}
