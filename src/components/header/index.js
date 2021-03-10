@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {BrowserRouter as Router, Link} from "react-router-dom"
 import "../../App.css"
 import "./index.less"
+import TOOLS from "../../assets/tools/tools";
+
 export default class Header extends Component {
     componentWillMount() {
         //console.log(window.location.pathname);
