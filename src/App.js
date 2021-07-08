@@ -6,6 +6,7 @@ import Route from "./components/baseRoute"
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import rootRoute from "./route/routes"
 import "./App.css"
+
 class App extends Component {
     constructor(props) {
         super(props);
